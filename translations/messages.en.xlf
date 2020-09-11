@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="label_actions">
+                <source>label_actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="label_updated_at">
+                <source>label_updated_at</source>
+                <target>Updated</target>
+            </trans-unit>
+            <trans-unit id="action_login">
+                <source>action_login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>New Password</target>
+            </trans-unit>
+            <trans-unit id="label.repeated_password">
+                <source>label.repeated_password</source>
+                <target>Reaped Password</target>
+            </trans-unit>
+            <trans-unit id="title_tag_list">
+                <source>title_tag_list</source>
+                <target>List of Tags</target>
+            </trans-unit>
+
+            <trans-unit id="title_movie_details">
+                <source>title_movie_details</source>
+                <target>Movie details  #%id%
+                </target>
+            </trans-unit>
+
+            <trans-unit id="label_director">
+                <source>label_director</source>
+                <target>Director</target>
+            </trans-unit>
+            <trans-unit id="label_description">
+                <source>label_description</source>
+                <target>Description</target>
+            </trans-unit>
+
+            <trans-unit id="label_year">
+                <source>label_year</source>
+                <target>Year of premier</target>
+            </trans-unit>
+            <trans-unit id="title_movie_list">
+                <source>title_movie_list</source>
+                <target>Movies</target>
+            </trans-unit>
+
+
+            <trans-unit id="title_task_list">
+                <source>title_task_list</source>
+                <target>Favourite movies catalogue by Vlada Mahera</target>
+            </trans-unit>
+            <trans-unit id="label_id">
+                <source>label_id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="label_created_at">
+                <source>label_created_at</source>
+                <target>Created</target>
+            </trans-unit>
+
+            <trans-unit id="action_view">
+                <source>action_view</source>
+                <target>View</target>
+            </trans-unit>
+            <trans-unit id="action_edit">
+                <source>action_edit</source>
+                <target>Edit</target>
+            </trans-unit>
+
+            <trans-unit id="action_save">
+                <source>action_save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="action.change">
+                <source>action.change</source>
+                <target>Change password</target>
+            </trans-unit>
+            <trans-unit id="title.user_editpasswd">
+                <source>title.user_editpasswd</source>
+                <target>Change password</target>
+            </trans-unit>
+
+
+
+            <trans-unit id="title_task_create">
+                <source>title_task_create</source>
+                <target>Add new movie</target>
+            </trans-unit>
+            <trans-unit id="title_task_edit">
+                <source>title_task_edit</source>
+                <target>Edit movie</target>
+            </trans-unit>
+            <trans-unit id="action_back_to_list">
+                <source>action_back_to_list</source>
+                <target>Back to list</target>
+            </trans-unit>
+            <trans-unit id="message_created_successfully">
+                <source>message_created_successfully</source>
+                <target>New element was successfully aded</target>
+            </trans-unit>
+
+            <trans-unit id="action_category_create">
+                <source>action_category_create</source>
+                <target>Create category</target>
+            </trans-unit>
+            <trans-unit id="title_category_list">
+                <source>title_category_list</source>
+                <target>Movies category list</target>
+            </trans-unit>
+
+
+
+
+
+
+            <trans-unit id="label_title">
+                <source>label_title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="label_category">
+                <source>label_category</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="label_content">
+                <source>label_content</source>
+                <target>Content</target>
+            </trans-unit>
+            <trans-unit id="label_tags">
+                <source>label_tags</source>
+                <target>Tags</target>
+            </trans-unit>
+            <trans-unit id="message_empty_list">
+                <source>message_empty_list</source>
+                <target>Empty list.</target>
+            </trans-unit>
+            <trans-unit id="title_record_list">
+                <source>title_record_list</source>
+                <target>Records list</target>
+            </trans-unit>
+            <trans-unit id="title_record_view">
+                <source>title_record_view</source>
+                <target>Records view #%id%
+                    </target>
+            </trans-unit>
+
+
+            <trans-unit id="title_category_details">
+                <source>title_category_details</source>
+                <target>Category datails #%id%
+                </target>
+            </trans-unit>
+
+            <trans-unit id="message_deleted_successfully">
+                <source>message_deleted_successfully</source>
+                <target>Iteam has been deleted successfully
+                </target>
+            </trans-unit>
+
+            <trans-unit id="title_category_delete">
+                <source>title_category_delete</source>
+                <target>Delete category #%id%
+                </target>
+            </trans-unit>
+            <trans-unit id="action_delete">
+                <source>action_delete</source>
+                <target>Delete
+                </target>
+            </trans-unit>
+            <trans-unit id="title_task_delete">
+                <source>title_task_delete</source>
+                <target>Delete movie #%id%
+                </target>
+            </trans-unit>
+
+ <trans-unit id="action_registration">
+ <source>action_registration</source>
+<target>Registration</target>
+</trans-unit>
+
+ <trans-unit id="title_register">
+ <source>title_register</source>
+<target>Registration</target>
+</trans-unit>
+
+ <trans-unit id="label_nickname_star">
+ <source>label_nickname_star</source>
+<target>Your Nickname:</target>
+</trans-unit>
+
+ <trans-unit id="label_name">
+ <source>label_name</source>
+<target>Your Name:</target>
+</trans-unit>
+
+ <trans-unit id="label_surname">
+ <source>label_surname</source>
+<target>Your Surname:</target>
+</trans-unit>
+
+ <trans-unit id="label_access_data">
+ <source>label_access_data</source>
+<target>Information for login</target>
+</trans-unit>
+
+ <trans-unit id="label_email_star">
+ <source>label_email_star</source>
+<target>Your Email:</target>
+</trans-unit>
+
+ <trans-unit id="label_password_star">
+ <source>label_password_star</source>
+<target>Your password:</target>
+</trans-unit>
+
+ <trans-unit id="label_repeat_password_star">
+ <source>label_repeat_password_star</source>
+<target>Reaped password:</target>
+</trans-unit>
+
+ <trans-unit id="label_save">
+ <source>label_save</source>
+<target>Save</target>
+</trans-unit>
+
+ <trans-unit id="message_registered_successfully">
+ <source>message_registered_successfully</source>
+<target>User registered successfully</target>
+</trans-unit>
+
+ <trans-unit id="label_none">
+ <source>label_none</source>
+<target>Choose category</target>
+</trans-unit>
+
+ <trans-unit id="title_movie_create">
+ <source>title_movie_create</source>
+<target>Add new Movie</target>
+</trans-unit>
+
+ <trans-unit id="title_movie_delete">
+ <source>title_movie_delete</source>
+<target>Delete movie #%id%</target>
+</trans-unit>
+
+ <trans-unit id="title_comment_create">
+ <source>title_comment_create</source>
+<target>Create comment</target>
+</trans-unit>
+
+ <trans-unit id="label_comment">
+ <source>label_comment</source>
+<target>Wright your comment:</target>
+</trans-unit>
+
+ <trans-unit id="comment_create">
+ <source>comment_create</source>
+<target>Create</target>
+</trans-unit>
+
+ <trans-unit id="comment_edit">
+ <source>comment_edit</source>
+<target>Edit</target>
+</trans-unit>
+
+
+ <trans-unit id="title_user_view">
+ <source>title_user_view</source>
+<target>Information about User </target>
+</trans-unit>
+
+ <trans-unit id="change_data">
+ <source>change_data</source>
+<target>Change information</target>
+</trans-unit>
+
+ <trans-unit id="all_user_list_back">
+ <source>all_user_list_back</source>
+<target>Back to all users</target>
+</trans-unit>
+
+ <trans-unit id="all_movies_list_back">
+ <source>all_movies_list_back</source>
+<target>Back to movies list</target>
+</trans-unit>
+
+ <trans-unit id="user_list">
+ <source>user_list</source>
+<target>Users list</target>
+</trans-unit>
+
+ <trans-unit id="title_comment_delete">
+ <source>title_comment_delete</source>
+<target>Delete comment</target>
+</trans-unit>
+
+ <trans-unit id="title_comment_edit">
+ <source>title_comment_edit</source>
+<target>Edit comment</target>
+</trans-unit>
+
+
+ <trans-unit id="label_nickname">
+ <source>label_nickname</source>
+<target>Nickname</target>
+</trans-unit>
+
+ <trans-unit id="label_role">
+ <source>label_role</source>
+<target>Role</target>
+</trans-unit>
+
+ <trans-unit id="message_item_not_found">
+ <source>message_item_not_found</source>
+<target>Iteam not found</target>
+</trans-unit>
+
+
+ <trans-unit id="user_not_found">
+ <source>user_not_found</source>
+<target>User doesn't exist</target>
+</trans-unit>
+
+ <trans-unit id="action_show">
+ <source>action_show</source>
+<target>Show</target>
+</trans-unit>
+
+ <trans-unit id="role_admin">
+ <source>role_admin</source>
+<target>Admin</target>
+</trans-unit>
+
+ <trans-unit id="role_user">
+ <source>role_user</source>
+<target>User</target>
+</trans-unit>
+
+ <trans-unit id="your_account">
+ <source>your_account</source>
+<target>Account</target>
+</trans-unit>
+
+ <trans-unit id="label_email">
+ <source>label_email</source>
+<target>Email</target>
+</trans-unit>
+
+
+ <trans-unit id="logged_as">
+ <source>logged_as</source>
+<target>You are logged as: </target>
+</trans-unit>
+
+
+ <trans-unit id="comment_delete">
+ <source>comment_delete</source>
+<target>Delete</target>
+</trans-unit>
+
+ <trans-unit id="title_tag_edit">
+ <source>title_tag_edit</source>
+<target>Edit tag #%id%</target>
+</trans-unit>
+
+ <trans-unit id="action_movie_index">
+ <source>action_movie_index</source>
+<target>Movies catalogue</target>
+</trans-unit>
+
+ <trans-unit id="label_movies">
+ <source>label_movies</source>
+<target>Movies</target>
+</trans-unit>
+
+ <trans-unit id="action_movie_create">
+ <source>action_movie_create</source>
+<target>Create movie</target>
+</trans-unit>
+
+ <trans-unit id="action.save">
+ <source>action.save</source>
+<target>Save</target>
+</trans-unit>
+
+ <trans-unit id="message.updated_successfully">
+ <source>message.updated_successfully</source>
+<target>Password Saved successfully</target>
+</trans-unit>
+
+ <trans-unit id="message_form_error">
+ <source>message_form_error</source>
+<target>Error</target>
+</trans-unit>
+
+ <trans-unit id="title_tag_delete">
+ <source>title_tag_delete</source>
+<target>Delete tag #%id%</target>
+</trans-unit>
+
+            <trans-unit id="message.deleted_successfully">
+                <source>message.deleted_successfully</source>
+                <target>Movie has been deleted successfully
+                </target>
+            </trans-unit>
+            <trans-unit id="action_task_index">
+                <source>action_task_index</source>
+                <target>Movies catalogue
+                </target>
+            </trans-unit>
+            <trans-unit id="action_category_index">
+                <source>action_category_index</source>
+                <target>Categories
+                </target>
+            </trans-unit>
+            <trans-unit id="action_tag_index">
+                <source>action_tag_index</source>
+                <target>Tag's
+                </target>
+            </trans-unit>
+            <trans-unit id="action_logout">
+                <source>action_logout</source>
+                <target>Logout
+                </target>
+            </trans-unit>
+
+            <trans-unit id="label_tasks">
+                <source>label_tasks</source>
+                <target>Catalogue
+                </target>
+            </trans-unit>
+
+            <trans-unit id="label_categories">
+                <source>label_categories</source>
+                <target>Categories
+                </target>
+            </trans-unit>
+
+            <trans-unit id="action_tag_create">
+                <source>action_tag_create</source>
+                <target>Create tag
+                </target>
+            </trans-unit>
+
+            <trans-unit id="title_tag_create">
+                <source>title_tag_create</source>
+                <target>Create tag
+                </target>
+            </trans-unit>
+
+            <trans-unit id="label_user_id">
+                <source>label_user_id</source>
+                <target>User id
+                </target>
+            </trans-unit>
+            <trans-unit id="title_comment_list">
+                <source>title_comment_list</source>
+                <target>Comments from users
+                </target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="title_category_create">
+                <source>title_category_create</source>
+                <target>Category create
+                </target>
+            </trans-unit>
+            <trans-unit id="title_category_edit">
+                <source>title_category_edit</source>
+                <target>Category edit
+                </target>
+            </trans-unit>
+
+            <trans-unit id="message_updated_successfully">
+                <source>message_updated_successfully</source>
+                <target>Iteam updated successfully
+                </target>
+            </trans-unit>
+
+
+
+            <trans-unit id="title_task_details">
+                <source>title_task_details</source>
+                <target>Details about movie #%id%</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

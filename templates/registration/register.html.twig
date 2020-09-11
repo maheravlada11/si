@@ -1,0 +1,10 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title_register',
+    attr: {
+        method: 'POST',
+        action: url('register')
+    },
+    form: form,
+    submit_label: 'label_save'|trans,
+    back_to_list_path: 'movie_index',
+} %}

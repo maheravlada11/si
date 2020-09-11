@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title_movie_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title_movie_list'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label_id'|trans, 'movie.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_created_at'|trans, 'movie.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_updated_at'|trans, 'movie.updatedAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_title'|trans, 'movie.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_category'|trans, 'category.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_tags'|trans, 'tag.title') }}</th>
+                <th>{{ 'label_actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for movie in pagination.items %}
+                <tr>
+                    <td>{{ movie.id }}</td>
+                    <td>{{ movie.createdAt|date('Y/m/d') }}</td>
+                    <td>{{ movie.updatedAt|date('Y/m/d') }}</td>
+                    <td>{{ movie.title }}</td>
+                    <td><a href="{{ url('movie_index', {'filters' : {'category' : movie.category.id}}) }}" title="{{ movie.category.title }}">
+                            {{ movie.category.title }}
+                        </a></td>
+                    <td>
+                        {% if movie.tags is defined and movie.tags|length %}
+                            {% for tag in movie.tags %}
+                                <a href="{{ url('movie_index', {'filters' : {'tag' : tag.id}}) }}" title="{{ tag.title }}">
+                                    {{ tag.title }}
+                                </a>
+                            {% endfor %}
+                        {% else %}
+                        {% endif %}
+                    </td>
+                    <td>
+
+                        <a href="{{ url('movie_show', {id: movie.id}) }}" title="{{ 'action_view'|trans }}">
+                            {{ 'action_view'|trans }}
+                        </a>
+
+
+
+
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a href="{{ url('movie_edit', {id: movie.id}) }}" title="{{ 'action_edit'|trans }}">
+                                {{ 'action_edit'|trans }}
+                            </a>
+                            <a href="{{ url('movie_delete', {id: movie.id}) }}" title="{{ 'action_view'|trans }}">
+                                {{ 'action_delete'|trans }}
+                            </a>
+
+                        {% endif %}
+
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+    {% else %}
+        <p>
+            {{ 'message_empty_list'|trans }}
+        </p>
+    {% endif %}
+
+{% endblock %}

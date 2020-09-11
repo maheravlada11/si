@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title_record_view'|trans({'%id%': item.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>{{ 'title_record_view'|trans({'%id%':item.id|default('')}) }}</h1>
+
+
+    {% if item is defined and item|length %}
+        <dl>
+            <dt>Title</dt>
+            <dd>{{ item.title }}</dd>
+            <dt>Content</dt>
+            <dd>{{ item.content }}</dd>
+            <dt>Tags</dt>
+            <dd>{{ item.tags|join(', ') }}</dd>
+        </dl>
+        <p>
+            <a href="{{  url('record_index') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+           </p>
+    {% else %}
+        <p>
+            {{ 'massage_not_found'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

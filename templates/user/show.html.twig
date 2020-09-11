@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title_user_view'|trans({'%nickname%': user.userData.nickname|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title_user_view'|trans({'%nickname%': user.userData.nickname|default('')}) }}</h1>
+
+    {% if user is defined and user|length %}
+
+        <dl class="dl-horizontal"> {# dl tag, a list with term and descriptions #}
+            <dt>{{ 'label_id'|trans }}</dt>
+            <dd>{{ user.id }}</dd>
+            <dt>{{ 'label_name'|trans }}</dt>
+            <dd>{{ user.userData.name }}</dd>
+            <dt>{{ 'label_surname'|trans }}</dt>
+            <dd>{{ user.userData.surname }}</dd>
+            <dt>{{ 'label_nickname'|trans }}</dt>
+            <dd>{{ user.userData.nickname }}</dd>
+            <dt>{{ 'label_email'|trans }}</dt>
+            <dd>{{ user.email }}</dd>
+        </dl>
+
+    {% else %}
+        {% include 'default/_single_flash_message.html.twig' with {
+            type: 'warning',
+            message: 'user_not_found'|trans
+        } %}
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ url('user_index') }}">{{'all_user_list_back'|trans}}</a><br>
+        {% endif %}
+
+
+{% if is_granted('ROLE_USER') %}
+    <a href="{{ url('movie_index') }}">{{'all_movies_list_back'|trans}}</a>
+{% endif %}
+
+
+{% endblock %}

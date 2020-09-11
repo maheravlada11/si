@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'user_list' | trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'user_list' | trans }}</h1>
+
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label_id'|trans, 'user.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_name'|trans, 'userData.name') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_surname'|trans, 'userData.surname') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_nickname'|trans, 'userData.nickname') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_email'|trans, 'user.email') }}</th>
+                <th>{{ 'label_role'|trans }}</th>
+                <th>{{ 'label_actions'|trans }}</th>
+            </tr>
+            {% for user in pagination.items %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.userData.name }}</td>
+                    <td>{{ user.userData.surname }}</td>
+                    <td>{{ user.userData.nickname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        {% if "ROLE_ADMIN" in user.roles %}
+                            {{'role_admin'|trans}}
+                        {% else %}
+                            {{'role_user'|trans}}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ url('user_show', {'id':user.id}) }}">{{ 'action_show'|trans }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+    {% else %}
+    {% include 'default/_single_flash_message.html.twig' with {
+        type: 'warning',
+        message: 'empty_user_list'|trans
+    } %}
+    {% endif %}
+
+{%  endblock %}

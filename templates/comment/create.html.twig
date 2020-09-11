@@ -1,0 +1,19 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title_comment_create',
+    attr: {
+        method: 'POST',
+        action: url('comment_create', {'id': movie.id}),
+    },
+    back_to_element_path: url('movie_show', {id: movie.id}),
+} %}
+
+{#{% include 'default/_form.html.twig' with {#}
+{#    page_title: 'title_comment_create',#}
+{#    attr: {#}
+{#        method: 'POST',#}
+{#        action: url('comment_create', {'id': article.id}),#}
+{#    },#}
+{#    form: form,#}
+{#    submit_label: 'action_create'|trans,#}
+{#    back_to_element_path: url('article_show', {id: article.id}),#}
+{#} %}#}

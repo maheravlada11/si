@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title_movie_details'|trans({'%id%': movie.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title_movie_details'|trans({'%id%': movie.id|default('')}) }}</h1>
+    {% if movie is defined and movie|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'label_id'|trans }}</dt>
+            <dd>{{ movie.id }}</dd>
+            <dt>{{ 'label_created_at'|trans }}</dt>
+            <dd>{{ movie.createdAt|date('Y/m/d') }}</dd>
+            <dt>{{ 'label_updated_at'|trans }}</dt>
+            <dd>{{ movie.updatedAt|date('Y/m/d') }}</dd>
+            <dt>{{ 'label_category'|trans }}</dt>
+            <dd>{{ movie.category.title }}</dd>
+            <dt>{{ 'label_director'|trans }}</dt>
+            <dd>{{  movie.director }}</dd>
+            <dt>{{ 'label_description'|trans }}</dt>
+            <dd>{{  movie.description }}</dd>
+            <dt>{{ 'label_title'|trans }}</dt>
+            <dd>{{  movie.title }}</dd>
+
+        </dl>
+
+        <dt>{{ 'title_comment_list'|trans  }}
+            {% if is_granted("ROLE_USER") %}
+                <a href="{{ url('comment_create', {id: movie.id}) }}"
+                   title="{{ 'comment_create'|trans }}">
+                    {{ 'comment_create'|trans }}
+                </a>
+            {% endif %}
+        </dt>
+        <dd>
+            <ul class="list-group-flush" >
+                {% for comment in movie.comment %}
+                    <li class="list-group-item">
+                        <div class="date">
+                            {{ comment.createdAt|date('Y/m/d') }} | <b>{{ comment.user.username }}</b>
+                        </div>
+                        <div class="comment">
+                            {{ comment.content }}<br>
+                        </div>
+                        {% if is_granted("ROLE_ADMIN") or is_granted('EDIT', comment) %}
+                            <div>
+                                <a href="{{ url('comment_edit', {id: comment.id}) }}" title="{{ 'comment_edit'|trans }}"> {{ 'comment_edit'|trans }}</a>
+                            </div>
+                        {% endif %}
+                        {% if is_granted("ROLE_ADMIN") or is_granted('DELETE', comment) %}
+                            <div>
+                                <a href="{{ url('comment_delete', {id: comment.id}) }}" title="{{ 'comment_delete'|trans }}"> {{ 'comment_delete'|trans }} </a>
+                            </div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </dd>
+
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-12">#}
+{#                    <div class="show-movie-container p-3 mt-4">#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-12">#}
+{#                                <h3><i class="pr-3 fa fa-comment"></i>{{ movie.comment|length }} Comments</h3>#}
+{#                                {% for comment in movie.comment %}#}
+{#                                    <div class="row">#}
+{#                                        <div class="col-sm-12">#}
+{#                                            <div class="comment-container d-inline-block pl-3 align-top">#}
+{#                                                <span class="commenter-name">{{ comment.user.email }}</span>#}
+{#                                                <span class="comment"> {{ comment.content }}</span>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                {% endfor %}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+
+
+
+        <p>
+            <a href="{{ url('movie_index') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+    {% else %}
+        <p>
+            {{ 'message_item_not_found'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}
